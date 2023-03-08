@@ -134,9 +134,9 @@ if ( ! function_exists( 'lifterlms_template_student_dashboard' ) ) {
 			do_action( 'lifterlms_before_student_dashboard_content' );
 
 			if ( isset( $tabs[ $current_tab ] ) && isset( $tabs[ $current_tab ]['content'] ) && is_callable( $tabs[ $current_tab ]['content'] ) ) {
-
+				echo '<div class="llms-sd-tab">';
 				call_user_func( $tabs[ $current_tab ]['content'] );
-
+				echo '</div><!-- .llms-sd-tab -->';
 			}
 		}
 
